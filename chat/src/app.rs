@@ -13,7 +13,13 @@ extern "C" {
 struct GreetArgs<'a> {
     text: &'a str,
 }
-
+/* message div format example: <div class="chat-message">
+                        <span class="chat-avatar">{"🤖"}</span>
+                        <div class="chat-message-content">
+                            <span class="chat-username">{"Bot"}</span>
+                            <span class="chat-text">{"Hi! I have a question about your product."}</span>
+                        </div>
+                    </div> */
 #[function_component(App)]
 pub fn app() -> Html {
     html! {
@@ -30,20 +36,6 @@ pub fn app() -> Html {
                     <span class="chat-header-title">{"# general"}</span>
                 </header>
                 <section class="chat-messages">
-                    <div class="chat-message">
-                        <span class="chat-avatar">{"🧑"}</span>
-                        <div class="chat-message-content">
-                            <span class="chat-username">{"User1"}</span>
-                            <span class="chat-text">{"Hello! How can I help you?"}</span>
-                        </div>
-                    </div>
-                    <div class="chat-message">
-                        <span class="chat-avatar">{"🤖"}</span>
-                        <div class="chat-message-content">
-                            <span class="chat-username">{"Bot"}</span>
-                            <span class="chat-text">{"Hi! I have a question about your product."}</span>
-                        </div>
-                    </div>
                 </section>
                 <form class="chat-input-area">
                     <input class="chat-input" type="text" placeholder="Message #general" />
