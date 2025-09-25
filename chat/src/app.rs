@@ -36,6 +36,7 @@ pub fn app() -> Html {
                     <span class="chat-header-title">{"# general"}</span>
                 </header>
                 <section class="chat-messages">
+                    
                 </section>
                 <form class="chat-input-area">
                     <input class="chat-input" type="text" placeholder="Message #general" />

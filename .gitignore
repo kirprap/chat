@@ -1,0 +1,44 @@
+# Git ignore for Rust + Tauri + Yew (WASM) project
+
+### Rust / Cargo
+/target/
+**/target/
+/Cargo.lock
+
+### WASM / frontend
+/dist/
+/pkg/
+/node_modules/
+/build/
+*.wasm
+*.wasm.map
+
+### Tauri / desktop
+/src-tauri/target/
+/target/
+/tauri.conf.json
+
+### IDE / Editor
+/.vscode/
+/.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.DS_Store
+Thumbs.db
+
+### Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+### Environment / Secrets
+.env
+.env.*
+
+### Misc
+*.iml
+
