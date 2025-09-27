@@ -1,0 +1,50 @@
+# Git ignore files
+.git
+.gitignore
+
+# Rust/Cargo files
+target/
+**/target/
+Cargo.lock
+**/*.rs.bk
+
+# Development artifacts
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Build artifacts
+dist/
+pkg/
+node_modules/
+build/
+*.wasm
+*.wasm.map
+
+# Debug files
+*.pdb
+*.dll
+*.exe
+*.d
+
+# Test files
+**/*test.rs.bk
+**/tests/
+
+# Environment files
+.env*
+**/.env*
+
+# Documentation
+*.md
+docs/
+
+# Cache files
+.cargo/
+CACHEDIR.TAG

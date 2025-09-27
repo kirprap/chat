@@ -1,44 +1,140 @@
-# Git ignore for Rust + Tauri + Yew (WASM) project
+# Rust Chat Application (.gitignore)
+# An open source Rust/Yew WebSocket chat application
 
-### Rust / Cargo
+### Rust / Cargo ###
 /target/
 **/target/
-/Cargo.lock
+debug/
+release/
+**/*.rs.bk
+*.pdb
 
-### WASM / frontend
+# Keep Cargo.lock for binary projects (good practice for applications)
+# /Cargo.lock
+
+### WASM / Frontend ###
 /dist/
 /pkg/
-/node_modules/
-/build/
+**/dist/
+**/pkg/
 *.wasm
 *.wasm.map
 
-### Tauri / desktop
-/src-tauri/target/
-/target/
-/tauri.conf.json
+### Development ###
+# Binary files
+*.exe
+*.dll
+*.so
+*.dylib
 
-### IDE / Editor
-/.vscode/
-/.idea/
+# Debug files
+*.dSYM/
+*.su
+*.idb
+
+# Build artifacts
+build/
+out/
+
+### Dependencies ###
+# Node (if using npm for frontend tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Rust dependencies
+**/.cargo/
+vendor/
+
+### IDEs and Editors ###
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+*.sw?
+
+# Vim/Emacs
 *.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+### OS Generated ###
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-### Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-### Environment / Secrets
+### Environment ###
 .env
 .env.*
+!.env.example
 
-### Misc
-*.iml
+### Docker ###
+.docker/
+docker-compose.override.yml
+
+### Logs ###
+logs/
+*.log
+
+### Testing ###
+coverage/
+.coverage
+junit.xml
+**/*test.rs.bk
+
+### Documentation ###
+# Keep documentation in git
+!docs/
+!*.md
+
+### Cache ###
+.cache/
+CACHEDIR.TAG
+
+### Project Specific ###
+# Frontend specific
+/chat/dist/
+/chat/pkg/
+/chat/target/
+
+# Backend specific
+/Backend/target/
+/Backend/debug/
+
+### Temporary Files ###
+*.tmp
+*.temp
+.temp/
+tmp/
+
+# Keep these files
+!.gitignore
+!.dockerignore
+!Dockerfile
+!docker-compose.yml
+!README.md
+!LICENSE
 

@@ -1,6 +1,4 @@
-mod app;
-
-use app::App;
+use chat_ui::app::App;
 
 fn main() {
     console_error_panic_hook::set_once();
